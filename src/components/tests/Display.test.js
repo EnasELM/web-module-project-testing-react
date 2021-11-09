@@ -79,7 +79,7 @@ test('displayFunc is called when the  fetch button is presses', async ()=> {
     mockFetchShow.mockResolvedValueOnce(testShow);
     const displayFun = jest.fn();
 
-    render(<Display displayFun={displayFun} />);
+    render(<Display displayFunc={displayFun} />);
     const button = screen.queryByRole("button");
     userEvent.click(button);
     await waitFor(()=> {
